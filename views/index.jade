@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .card.yturl-card.col-md-1
+    form#scrape-form(name='scrape-form', action='/scrape', method='post')
+      #url-input.input-group.url-container.col-md-1.has-feedback
+        input#yt-url.form-control.search-query(type='text', name='yt-url', placeholder='YouTube URL')
+        span.input-group-btn
+          input#scrape-btn.btn(type='submit', value='Scrape', data-type='last' disabled)
+
+
+  .card.main-card.col-md-1
+    #main-content
+      h4 Descargar comentarios de YouTube
+      p Este sitio web le permite descargar (Scraping) todos los comentarios de un video de YouTube. Los resultados incluyen el texto del comentario, nombre de usuario, fecha y otra información.
+      p Los comentarios se pueden descargar en los siguiente formatos:
+      ul
+        li JSON
+        li CSV
+          em  (Se pueden abrir Excel)
+     
+      .text-center.footer
+        a(target='_blank' href='http://juliacasoft.com/') &copy; 2020 AngelDX
